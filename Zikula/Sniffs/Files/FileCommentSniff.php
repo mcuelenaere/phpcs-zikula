@@ -411,7 +411,7 @@ class Zikula_Sniffs_Files_FileCommentSniff implements PHP_CodeSniffer_Sniff
     {
         $copyrights = $this->commentParser->getCopyrights();
         $copyright  = $copyrights[0];
-		$wanted = "(c) 2001, Zikula Development Team";
+		$wanted = "(c) Zikula Development Team";
         if ($copyright !== null) {
             $content = $copyright->getContent();
             if (empty($content) === true) {
