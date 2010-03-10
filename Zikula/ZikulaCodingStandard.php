@@ -24,7 +24,7 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
                 'Squiz/Sniffs/Classes/LowercaseClassKeywordsSniff.php', // all class keywords must be lowercase
                 //'Squiz/Sniffs/Classes/ValidClassNameSniff.php', // all class names must be camel case
                 'Squiz/Sniffs/Classes/SelfMemberReferenceSniff.php', // checks use of self in classes
-                //'Squiz/Sniffs/Commenting/BlockCommentSniff.php', // 
+                //'Squiz/Sniffs/Commenting/BlockCommentSniff.php', //
                 //'Squiz/Sniffs/Commenting/ClassCommentSniff.php', //
         );
 
