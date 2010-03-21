@@ -17,16 +17,39 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
     public function getIncludedSniffs()
     {
         return array(
-                'Zend/Sniffs/Files/ClosingTagSniff.php', // no ending PHP_EOF tags
-                'Generic/Sniffs/PHP/DisallowShortOpenTagSniff.php', // no short PHP tags
-                'Generic/Sniffs/PHP/LowerCaseConstantSniff.php', // null, true, false
-                'Generic/Sniffs/WhiteSpace/DisallowTabIndentSniff.php', // only spaces for tags
-                'Squiz/Sniffs/Classes/LowercaseClassKeywordsSniff.php', // all class keywords must be lowercase
-                //'Squiz/Sniffs/Classes/ValidClassNameSniff.php', // all class names must be camel case
-                'Squiz/Sniffs/Classes/SelfMemberReferenceSniff.php', // checks use of self in classes
-                //'Squiz/Sniffs/Commenting/BlockCommentSniff.php', //
-                //'Squiz/Sniffs/Commenting/ClassCommentSniff.php', //
+            'Generic/Sniffs/CodeAnalysis/JumbledIncrementerSniff.php',
+            'Generic/Sniffs/CodeAnalysis/UnusedFunctionParameterSniff.php',
+            'Generic/Sniffs/CodeAnalysis/UnconditionalIfStatementSniff.php',
+            'Generic/Sniffs/CodeAnalysis/UselessOverridingMethodSniff.php',
+            'Generic/Sniffs/CodeAnalysis/ForLoopWithTestFunctionCallSniff.php',
+            'Generic/Sniffs/CodeAnalysis/ForLoopShouldBeWhileLoopSniff.php',
+            'Generic/Sniffs/CodeAnalysis/UnnecessaryFinalModifierSniff.php',
+            'Generic/Sniffs/CodeAnalysis/EmptyStatementSniff.php',
+            'Generic/Sniffs/Functions/OpeningFunctionBraceBsdAllmanSniff.php',
+            'Generic/Sniffs/Metrics/NestingLevelSniff.php',
+            'Generic/Sniffs/Metrics/CyclomaticComplexitySniff.php',
+            'Generic/Sniffs/Classes/DuplicateClassNameSniff.php',
+            'Generic/Sniffs/NamingConventions/ConstructorNameSniff.php',
+            //'Generic/Sniffs/NamingConventions/UpperCaseConstantNameSniff.php',// this conflicts with PHP 5.3 namespace and use syntax
+            'Generic/Sniffs/PHP/DisallowShortOpenTagSniff.php',  // no short PHP tags
+            'Generic/Sniffs/PHP/LowerCaseConstantSniff.php',  // null, true, false should be lower case
+            'Generic/Sniffs/WhiteSpace/DisallowTabIndentSniff.php',  // only spaces for indents
+            'MySource/Sniffs/PHP/EvalObjectFactorySniff.php',  // prohibit eval for object instanciation
+            'PEAR/Sniffs/Classes/ClassDeclarationSniff.php',
+
+            'Squiz/Sniffs/Commenting/EmptyCatchCommentSniff.php',
+            'Squiz/Sniffs/Commenting/FunctionCommentThrowTagSniff.php',
+
+            'Squiz/Sniffs/Classes/LowercaseClassKeywordsSniff.php',
+            'Squiz/Sniffs/Classes/SelfMemberReferenceSniff.php',
+            'Squiz/Sniffs/Classes/DuplicatePropertySniff.php',
+            'Squiz/Sniffs/Classes/ClassFileNameSniff.php',
+            'Squiz/Sniffs/Classes/ValidClassNameSniff.php',
+            'Squiz/Sniffs/Operators/ValidLogicalOperatorsSniff.php',
+            'Squiz/Sniffs/Scope/StaticThisUsageSniff.php',
+            'Zend/Sniffs/Files/ClosingTagSniff.php',// no ending PHP_EOF tags
         );
+
 
     }
 

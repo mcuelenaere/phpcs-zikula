@@ -41,7 +41,7 @@ class Zikula_Sniffs_Files_LineLengthSniff extends Generic_Sniffs_Files_LineLengt
      *
      * @var int
      */
-    protected $lineLimit = 160;
+    protected $lineLimit = 180;
 
     /**
      * The limit that the length of a line must not exceed.
