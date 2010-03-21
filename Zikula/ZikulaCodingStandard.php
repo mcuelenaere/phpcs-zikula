@@ -25,11 +25,11 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
             //'Generic/Sniffs/CodeAnalysis/ForLoopShouldBeWhileLoopSniff.php',
             //'Generic/Sniffs/CodeAnalysis/UnnecessaryFinalModifierSniff.php',
             //'Generic/Sniffs/CodeAnalysis/EmptyStatementSniff.php',
-            'Generic/Sniffs/Functions/OpeningFunctionBraceBsdAllmanSniff.php',
+            //'Generic/Sniffs/Functions/OpeningFunctionBraceBsdAllmanSniff.php',
             //'Generic/Sniffs/Metrics/NestingLevelSniff.php',
             //'Generic/Sniffs/Metrics/CyclomaticComplexitySniff.php',
-            'Generic/Sniffs/Classes/DuplicateClassNameSniff.php',
-            'Generic/Sniffs/NamingConventions/ConstructorNameSniff.php',
+            //'Generic/Sniffs/Classes/DuplicateClassNameSniff.php',
+            //'Generic/Sniffs/NamingConventions/ConstructorNameSniff.php',
             //'Generic/Sniffs/NamingConventions/UpperCaseConstantNameSniff.php',// this conflicts with PHP 5.3 namespace and use syntax
             'Generic/Sniffs/PHP/DisallowShortOpenTagSniff.php',  // no short PHP tags
             'Generic/Sniffs/PHP/LowerCaseConstantSniff.php',  // null, true, false should be lower case
