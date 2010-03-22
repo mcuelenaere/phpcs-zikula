@@ -268,15 +268,15 @@ class Zikula_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_S
             $phpcsFile->addError($error, ($commentStart + 1));
         }
 
-        if (preg_match('|[A-Z]|', $testShort[0]) === 0) {
-            $error = 'Function comment short description must start with a capital letter';
-            $phpcsFile->addError($error, ($commentStart + 1));
-        }
-
-        if ($lastChar !== '.') {
-            $error = 'Function comment short description must end with a full stop';
-            $phpcsFile->addError($error, ($commentStart + 1));
-        }
+//        if (preg_match('|[A-Z]|', $testShort[0]) === 0) {
+//            $error = 'Function comment short description must start with a capital letter';
+//            $phpcsFile->addError($error, ($commentStart + 1));
+//        }
+//
+//        if ($lastChar !== '.') {
+//            $error = 'Function comment short description must end with a full stop';
+//            $phpcsFile->addError($error, ($commentStart + 1));
+//        }
 
         // Check for unknown/deprecated tags.
         $unknownTags = $this->commentParser->getUnknown();
@@ -539,19 +539,19 @@ class Zikula_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_S
             } else if (empty($content) === true) {
                 $error = 'Comment missing for @throws tag in function comment';
                 $this->currentFile->addError($error, $errorPos);
-            } else {
-                // Starts with a capital letter and ends with a fullstop.
-                $firstChar = $content{0};
-                if (strtoupper($firstChar) !== $firstChar) {
-                    $error = '@throws tag comment must start with a capital letter';
-                    $this->currentFile->addError($error, $errorPos);
-                }
-
-                $lastChar = $content[(strlen($content) - 1)];
-                if ($lastChar !== '.') {
-                    $error = '@throws tag comment must end with a full stop';
-                    $this->currentFile->addError($error, $errorPos);
-                }
+//            } else {
+//                // Starts with a capital letter and ends with a fullstop.
+//                $firstChar = $content{0};
+//                if (strtoupper($firstChar) !== $firstChar) {
+//                    $error = '@throws tag comment must start with a capital letter';
+//                    $this->currentFile->addError($error, $errorPos);
+//                }
+//
+//                $lastChar = $content[(strlen($content) - 1)];
+//                if ($lastChar !== '.') {
+//                    $error = '@throws tag comment must end with a full stop';
+//                    $this->currentFile->addError($error, $errorPos);
+//                }
             }
 
             $since = array_keys($tagOrder, 'since');
@@ -724,20 +724,20 @@ class Zikula_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_S
                 if ($paramComment === '') {
                     $error = 'Missing comment for param "'.$paramName.'" at position '.$pos;
                     $this->currentFile->addError($error, $errorPos);
-                } else {
-                    // Param comments must start with a capital letter and
-                    // end with the full stop.
-                    $firstChar = $paramComment{0};
-                    if (preg_match('|[A-Z]|', $firstChar) === 0) {
-                        $error = 'Param comment must start with a capital letter';
-                        $this->currentFile->addError($error, $errorPos);
-                    }
-
-                    $lastChar = $paramComment[(strlen($paramComment) - 1)];
-                    if ($lastChar !== '.') {
-                        $error = 'Param comment must end with a full stop';
-                        $this->currentFile->addError($error, $errorPos);
-                    }
+//                } else {
+//                    // Param comments must start with a capital letter and
+//                    // end with the full stop.
+//                    $firstChar = $paramComment{0};
+//                    if (preg_match('|[A-Z]|', $firstChar) === 0) {
+//                        $error = 'Param comment must start with a capital letter';
+//                        $this->currentFile->addError($error, $errorPos);
+//                    }
+//
+//                    $lastChar = $paramComment[(strlen($paramComment) - 1)];
+//                    if ($lastChar !== '.') {
+//                        $error = 'Param comment must end with a full stop';
+//                        $this->currentFile->addError($error, $errorPos);
+//                    }
                 }
 
                 $previousParam = $param;

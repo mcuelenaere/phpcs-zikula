@@ -189,11 +189,11 @@ class Zikula_Sniffs_Commenting_ClassCommentSniff implements PHP_CodeSniffer_Snif
 
             $newlineCount += $newlineBetween;
 
-            $testLong = trim($long);
-            if (preg_match('|[A-Z]|', $testLong[0]) === 0) {
-                $error = 'Class comment long description must start with a capital letter';
-                $phpcsFile->addError($error, ($commentStart + $newlineCount));
-            }
+//            $testLong = trim($long);
+//            if (preg_match('|[A-Z]|', $testLong[0]) === 0) {
+//                $error = 'Class comment long description must start with a capital letter';
+//                $phpcsFile->addError($error, ($commentStart + $newlineCount));
+//            }
         }
 
         // Exactly one blank line before tags.
@@ -219,15 +219,15 @@ class Zikula_Sniffs_Commenting_ClassCommentSniff implements PHP_CodeSniffer_Snif
             $phpcsFile->addError($error, ($commentStart + 1));
         }
 
-        if (preg_match('|[A-Z]|', $testShort[0]) === 0) {
-            $error = 'Class comment short description must start with a capital letter';
-            $phpcsFile->addError($error, ($commentStart + 1));
-        }
-
-        if ($lastChar !== '.') {
-            $error = 'Class comment short description must end with a full stop';
-            $phpcsFile->addError($error, ($commentStart + 1));
-        }
+//        if (preg_match('|[A-Z]|', $testShort[0]) === 0) {
+//            $error = 'Class comment short description must start with a capital letter';
+//            $phpcsFile->addWarning($error, ($commentStart + 1));
+//        }
+//
+//        if ($lastChar !== '.') {
+//            $error = 'Class comment short description must end with a full stop';
+//            $phpcsFile->addError($error, ($commentStart + 1));
+//        }
 
         // Check for unknown/deprecated tags.
         $unknownTags = $this->commentParser->getUnknown();
