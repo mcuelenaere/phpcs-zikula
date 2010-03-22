@@ -147,20 +147,20 @@ class Zikula_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Sniff
             }
 
             // Exactly one blank line after the file comment.
-            $nextTokenStart = $phpcsFile->findNext(T_WHITESPACE, ($commentEnd + 1), null, true);
-            if ($nextTokenStart !== false) {
-                $blankLineAfter = 0;
-                for ($i = ($commentEnd + 1); $i < $nextTokenStart; $i++) {
-                    if ($tokens[$i]['code'] === T_WHITESPACE && $tokens[$i]['content'] === $phpcsFile->eolChar) {
-                        $blankLineAfter++;
-                    }
-                }
-
-                if ($blankLineAfter !== 2) {
-                    $error = 'There must be exactly one blank line after the file comment';
-                    $phpcsFile->addError($error, ($commentEnd + 1));
-                }
-            }
+//            $nextTokenStart = $phpcsFile->findNext(T_WHITESPACE, ($commentEnd + 1), null, true);
+//            if ($nextTokenStart !== false) {
+//                $blankLineAfter = 0;
+//                for ($i = ($commentEnd + 1); $i < $nextTokenStart; $i++) {
+//                    if ($tokens[$i]['code'] === T_WHITESPACE && $tokens[$i]['content'] === $phpcsFile->eolChar) {
+//                        $blankLineAfter++;
+//                    }
+//                }
+//
+//                if ($blankLineAfter !== 2) {
+//                    $error = 'There must be exactly one blank line after the file comment';
+//                    $phpcsFile->addError($error, ($commentEnd + 1));
+//                }
+//            }
 
             $commentString = $phpcsFile->getTokensAsString($commentStart, ($commentEnd - $commentStart + 1));
 

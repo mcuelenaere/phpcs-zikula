@@ -25,6 +25,7 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
             //'Generic/Sniffs/CodeAnalysis/ForLoopShouldBeWhileLoopSniff.php',
             //'Generic/Sniffs/CodeAnalysis/UnnecessaryFinalModifierSniff.php',
             'Generic/Sniffs/CodeAnalysis/EmptyStatementSniff.php',
+            'Generic/Sniffs/Formatting/NoSpaceAfterCastSniff.php',
             //'Generic/Sniffs/Functions/OpeningFunctionBraceBsdAllmanSniff.php',
             //'Generic/Sniffs/Metrics/NestingLevelSniff.php',
             //'Generic/Sniffs/Metrics/CyclomaticComplexitySniff.php',
@@ -34,8 +35,9 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
             'Generic/Sniffs/PHP/DisallowShortOpenTagSniff.php',  // no short PHP tags
             'Generic/Sniffs/PHP/LowerCaseConstantSniff.php',  // null, true, false should be lower case
             'Generic/Sniffs/WhiteSpace/DisallowTabIndentSniff.php',  // only spaces for indents
+            'Generic/Sniffs/WhiteSpace/ScopeIndentSniff.php',
             'MySource/Sniffs/PHP/EvalObjectFactorySniff.php',  // prohibit eval for object instanciation
-            'PEAR/Sniffs/Classes/ClassDeclarationSniff.php',
+            //'PEAR/Sniffs/Classes/ClassDeclarationSniff.php',
 
             'Squiz/Sniffs/Commenting/EmptyCatchCommentSniff.php',
             'Squiz/Sniffs/Commenting/FunctionCommentThrowTagSniff.php',
@@ -45,6 +47,14 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
             'Squiz/Sniffs/Classes/DuplicatePropertySniff.php',
             'Squiz/Sniffs/Classes/ClassFileNameSniff.php',
             'Squiz/Sniffs/Classes/ValidClassNameSniff.php',
+            'Squiz/Sniffs/ControlStructures/ControlSignatureSniff.php',
+            'Squiz/Sniffs/ControlStructures/ElseIfDeclarationSniff.php',
+            'Squiz/Sniffs/ControlStructures/ForEachLoopDeclarationSniff.php',
+            'Squiz/Sniffs/ControlStructures/ForLoopDeclarationSniff.php',
+            //'Squiz/Sniffs/ControlStructures/InlineIfDeclarationSniff.php',
+            'Squiz/Sniffs/ControlStructures/LowercaseDeclarationSniff.php',
+            'Squiz/Sniffs/ControlStructures/SwitchDeclarationSniff.php',
+
             'Squiz/Sniffs/Operators/ValidLogicalOperatorsSniff.php',
             'Squiz/Sniffs/Scope/StaticThisUsageSniff.php',
             'Zend/Sniffs/Files/ClosingTagSniff.php',// no ending PHP_EOF tags
