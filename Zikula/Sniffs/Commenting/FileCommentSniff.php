@@ -250,7 +250,7 @@ class Zikula_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Sniff
 
             if ($lastChar !== '.') {
                 $error = 'File comment short description must end with a full stop';
-                $phpcsFile->addError($error, ($commentStart + 1));
+//                $phpcsFile->addError($error, ($commentStart + 1));
             }
 
             // Check for unknown/deprecated tags.
