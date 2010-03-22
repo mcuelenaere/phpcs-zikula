@@ -652,8 +652,8 @@ class Zikula_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_S
                 foreach ($typeNames as $typeName) {
                     $suggestedName = PHP_CodeSniffer::suggestType($typeName);
                     if ($typeName !== $suggestedName) {
-                        $error = "Expected \"$suggestedName\"; found \"$typeName\" for $paramName at position $pos";
-                        $this->currentFile->addError($error, $errorPos);
+//                        $error = "Expected \"$suggestedName\"; found \"$typeName\" for $paramName at position $pos";
+//                        $this->currentFile->addError($error, $errorPos);
                     } else if (count($typeNames) === 1) {
                         // Check type hint for array and custom type.
                         $suggestedTypeHint = '';

@@ -168,15 +168,15 @@ class Zikula_Sniffs_Commenting_InlineCommentSniff implements PHP_CodeSniffer_Sni
             $spaceCount++;
         }
 
-        if ($spaceCount === 0) {
-            $error = 'No space before comment text; expected "// '.substr($comment, 2).'" but found "'.$comment.'"';
-            $phpcsFile->addError($error, $stackPtr);
-        }
+//        if ($spaceCount === 0) {
+//            $error = 'No space before comment text; expected "// '.substr($comment, 2).'" but found "'.$comment.'"';
+//            $phpcsFile->addError($error, $stackPtr);
+//        }
 
-        if ($spaceCount > 1) {
-            $error = $spaceCount.' spaces found before inline comment; expected "// '.substr($comment, (2 + $spaceCount)).'" but found "'.$comment.'"';
-            $phpcsFile->addError($error, $stackPtr);
-        }
+//        if ($spaceCount > 1) {
+//            $error = $spaceCount.' spaces found before inline comment; expected "// '.substr($comment, (2 + $spaceCount)).'" but found "'.$comment.'"';
+//            $phpcsFile->addError($error, $stackPtr);
+//        }
 
 
         // The below section determines if a comment block is correctly capitalised,
