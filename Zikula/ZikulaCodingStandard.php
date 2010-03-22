@@ -17,26 +17,15 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
     public function getIncludedSniffs()
     {
         return array(
-            //'Generic/Sniffs/CodeAnalysis/JumbledIncrementerSniff.php',
-            //'Generic/Sniffs/CodeAnalysis/UnusedFunctionParameterSniff.php',
-            //'Generic/Sniffs/CodeAnalysis/UnconditionalIfStatementSniff.php',
-            //'Generic/Sniffs/CodeAnalysis/UselessOverridingMethodSniff.php',
-            //'Generic/Sniffs/CodeAnalysis/ForLoopWithTestFunctionCallSniff.php',
-            //'Generic/Sniffs/CodeAnalysis/ForLoopShouldBeWhileLoopSniff.php',
-            //'Generic/Sniffs/CodeAnalysis/UnnecessaryFinalModifierSniff.php',
-            //'Generic/Sniffs/CodeAnalysis/EmptyStatementSniff.php', // seems to make mistakes with if ($var === true) {}
             'Generic/Sniffs/Formatting/NoSpaceAfterCastSniff.php',
-            //'Generic/Sniffs/Functions/OpeningFunctionBraceBsdAllmanSniff.php',
-            //'Generic/Sniffs/Metrics/NestingLevelSniff.php',
-            //'Generic/Sniffs/Metrics/CyclomaticComplexitySniff.php',
-            //'Generic/Sniffs/Classes/DuplicateClassNameSniff.php',
-            //'Generic/Sniffs/NamingConventions/ConstructorNameSniff.php',
-            //'Generic/Sniffs/NamingConventions/UpperCaseConstantNameSniff.php',// this conflicts with PHP 5.3 namespace and use syntax, fixed in SVN not released in 1.2.2
             'Generic/Sniffs/PHP/DisallowShortOpenTagSniff.php',  // no short PHP tags
             'Generic/Sniffs/PHP/LowerCaseConstantSniff.php',  // null, true, false should be lower case
             'Generic/Sniffs/WhiteSpace/DisallowTabIndentSniff.php',  // only spaces for indents
             'Generic/Sniffs/WhiteSpace/ScopeIndentSniff.php',
             'MySource/Sniffs/PHP/EvalObjectFactorySniff.php',  // prohibit eval for object instanciation
+
+            'PEAR/Sniffs/NamingConventions/ValidFunctionNameSniff.php',
+            'PEAR/Sniffs/NamingConventions/ValidVariableNameSniff.php',
 
             'Squiz/Sniffs/Commenting/EmptyCatchCommentSniff.php',
             'Squiz/Sniffs/Commenting/FunctionCommentThrowTagSniff.php',
@@ -44,15 +33,9 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
             'Squiz/Sniffs/Classes/LowercaseClassKeywordsSniff.php',
             'Squiz/Sniffs/Classes/SelfMemberReferenceSniff.php',
             'Squiz/Sniffs/Classes/DuplicatePropertySniff.php',
-            //'Squiz/Sniffs/Classes/ClassFileNameSniff.php',
-            //'Squiz/Sniffs/Classes/ValidClassNameSniff.php',
-            'Squiz/Sniffs/ControlStructures/ControlSignatureSniff.php',
-            //'Squiz/Sniffs/ControlStructures/ElseIfDeclarationSniff.php', // crazy
             'Squiz/Sniffs/ControlStructures/ForEachLoopDeclarationSniff.php',
             'Squiz/Sniffs/ControlStructures/ForLoopDeclarationSniff.php',
-            //'Squiz/Sniffs/ControlStructures/InlineIfDeclarationSniff.php',// problematic
             'Squiz/Sniffs/ControlStructures/LowercaseDeclarationSniff.php',
-            //'Squiz/Sniffs/ControlStructures/SwitchDeclarationSniff.php',  // problematic
 
             'Squiz/Sniffs/Objects/ObjectInstantiationSniff.php',
 
