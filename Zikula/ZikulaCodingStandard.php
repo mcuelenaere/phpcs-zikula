@@ -53,7 +53,9 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
             'Squiz/Sniffs/ControlStructures/ForLoopDeclarationSniff.php',
             //'Squiz/Sniffs/ControlStructures/InlineIfDeclarationSniff.php',
             'Squiz/Sniffs/ControlStructures/LowercaseDeclarationSniff.php',
-            'Squiz/Sniffs/ControlStructures/SwitchDeclarationSniff.php',
+            //'Squiz/Sniffs/ControlStructures/SwitchDeclarationSniff.php',
+
+            'Squiz/Sniffs/Objects/ObjectInstantiationSniff.php',
 
             'Squiz/Sniffs/Operators/ValidLogicalOperatorsSniff.php',
             'Squiz/Sniffs/Scope/StaticThisUsageSniff.php',
