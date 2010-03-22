@@ -24,7 +24,7 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
             //'Generic/Sniffs/CodeAnalysis/ForLoopWithTestFunctionCallSniff.php',
             //'Generic/Sniffs/CodeAnalysis/ForLoopShouldBeWhileLoopSniff.php',
             //'Generic/Sniffs/CodeAnalysis/UnnecessaryFinalModifierSniff.php',
-            'Generic/Sniffs/CodeAnalysis/EmptyStatementSniff.php',
+            //'Generic/Sniffs/CodeAnalysis/EmptyStatementSniff.php', // seems to make mistakes with if ($var === true) {}
             'Generic/Sniffs/Formatting/NoSpaceAfterCastSniff.php',
             //'Generic/Sniffs/Functions/OpeningFunctionBraceBsdAllmanSniff.php',
             //'Generic/Sniffs/Metrics/NestingLevelSniff.php',
