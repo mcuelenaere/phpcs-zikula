@@ -147,20 +147,20 @@ class Zikula_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Sniff
             }
 
             // Exactly one blank line after the file comment.
-//            $nextTokenStart = $phpcsFile->findNext(T_WHITESPACE, ($commentEnd + 1), null, true);
-//            if ($nextTokenStart !== false) {
-//                $blankLineAfter = 0;
-//                for ($i = ($commentEnd + 1); $i < $nextTokenStart; $i++) {
-//                    if ($tokens[$i]['code'] === T_WHITESPACE && $tokens[$i]['content'] === $phpcsFile->eolChar) {
-//                        $blankLineAfter++;
-//                    }
-//                }
-//
-//                if ($blankLineAfter !== 2) {
-//                    $error = 'There must be exactly one blank line after the file comment';
+            $nextTokenStart = $phpcsFile->findNext(T_WHITESPACE, ($commentEnd + 1), null, true);
+            if ($nextTokenStart !== false) {
+                $blankLineAfter = 0;
+                for ($i = ($commentEnd + 1); $i < $nextTokenStart; $i++) {
+                    if ($tokens[$i]['code'] === T_WHITESPACE && $tokens[$i]['content'] === $phpcsFile->eolChar) {
+                        $blankLineAfter++;
+                    }
+                }
+
+                if ($blankLineAfter !== 2) {
+                    $error = 'There must be exactly one blank line after the file comment';
 //                    $phpcsFile->addError($error, ($commentEnd + 1));
-//                }
-//            }
+                }
+            }
 
             $commentString = $phpcsFile->getTokensAsString($commentStart, ($commentEnd - $commentStart + 1));
 
@@ -191,50 +191,50 @@ class Zikula_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Sniff
 
             // No extra newline before short description.
             $short        = $comment->getShortComment();
-//            $newlineCount = 0;
-//            $newlineSpan  = strspn($short, $phpcsFile->eolChar);
-//            if ($short !== '' && $newlineSpan > 0) {
-//                $line  = ($newlineSpan > 1) ? 'newlines' : 'newline';
-//                $error = "Extra $line found before file comment short description";
+            $newlineCount = 0;
+            $newlineSpan  = strspn($short, $phpcsFile->eolChar);
+            if ($short !== '' && $newlineSpan > 0) {
+                $line  = ($newlineSpan > 1) ? 'newlines' : 'newline';
+                $error = "Extra $line found before file comment short description";
 //                $phpcsFile->addError($error, ($commentStart + 1));
-//            }
-//
-//            $newlineCount = (substr_count($short, $phpcsFile->eolChar) + 1);
-//
-//            // Exactly one blank line between short and long description.
-//            $long = $comment->getLongComment();
-//            if (empty($long) === false) {
-//                $between        = $comment->getWhiteSpaceBetween();
-//                $newlineBetween = substr_count($between, $phpcsFile->eolChar);
-//                if ($newlineBetween !== 2) {
-//                    $error = 'There must be exactly one blank line between descriptions in file comment';
+            }
+
+            $newlineCount = (substr_count($short, $phpcsFile->eolChar) + 1);
+
+            // Exactly one blank line between short and long description.
+            $long = $comment->getLongComment();
+            if (empty($long) === false) {
+                $between        = $comment->getWhiteSpaceBetween();
+                $newlineBetween = substr_count($between, $phpcsFile->eolChar);
+                if ($newlineBetween !== 2) {
+                    $error = 'There must be exactly one blank line between descriptions in file comment';
 //                    $phpcsFile->addError($error, ($commentStart + $newlineCount + 1));
-//                }
-//
-//                $newlineCount += $newlineBetween;
-//
-//                $testLong = trim($long);
-//                if (preg_match('|[A-Z]|', $testLong[0]) === 0) {
-//                    $error = 'File comment long description must start with a capital letter';
+                }
+
+                $newlineCount += $newlineBetween;
+
+                $testLong = trim($long);
+                if (preg_match('|[A-Z]|', $testLong[0]) === 0) {
+                    $error = 'File comment long description must start with a capital letter';
 //                    $phpcsFile->addError($error, ($commentStart + $newlineCount));
-//                }
-//            }//end if
-//
-//            // Exactly one blank line before tags.
-//            $tags = $this->commentParser->getTagOrders();
-//            if (count($tags) > 1) {
-//                $newlineSpan = $comment->getNewlineAfter();
-//                if ($newlineSpan !== 2) {
-//                    $error = 'There must be exactly one blank line before the tags in file comment';
-//                    if ($long !== '') {
-//                        $newlineCount += (substr_count($long, $phpcsFile->eolChar) - $newlineSpan + 1);
-//                    }
-//
+                }
+            }//end if
+
+            // Exactly one blank line before tags.
+            $tags = $this->commentParser->getTagOrders();
+            if (count($tags) > 1) {
+                $newlineSpan = $comment->getNewlineAfter();
+                if ($newlineSpan !== 2) {
+                    $error = 'There must be exactly one blank line before the tags in file comment';
+                    if ($long !== '') {
+                        $newlineCount += (substr_count($long, $phpcsFile->eolChar) - $newlineSpan + 1);
+                    }
+
 //                    $phpcsFile->addError($error, ($commentStart + $newlineCount));
-//                    $short = rtrim($short, $phpcsFile->eolChar.' ');
-//                }
-//            }
-//
+                    $short = rtrim($short, $phpcsFile->eolChar.' ');
+                }
+            }
+
             // Short description must be single line and end with a full stop.
             $testShort = trim($short);
             $lastChar  = $testShort[(strlen($testShort) - 1)];
