@@ -189,8 +189,8 @@ class Zikula_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Sniff
                 $phpcsFile->addError($error, $commentStart);
             }
 
-//            // No extra newline before short description.
-//            $short        = $comment->getShortComment();
+            // No extra newline before short description.
+            $short        = $comment->getShortComment();
 //            $newlineCount = 0;
 //            $newlineSpan  = strspn($short, $phpcsFile->eolChar);
 //            if ($short !== '' && $newlineSpan > 0) {
