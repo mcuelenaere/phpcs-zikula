@@ -32,7 +32,7 @@ if (class_exists('Generic_Sniffs_Files_LineEndingsSniff', true) === false) {
  * @version   Release: 1.2.1
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
-class Zikula_Sniffs_Files_LineEndingsSniff extends Generic_Sniffs_Files_LineEndingsSniff
+class ZikulaVCSFilter_Sniffs_Files_LineEndingsSniff extends Generic_Sniffs_Files_LineEndingsSniff
 {
 
     /**

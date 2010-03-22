@@ -6,7 +6,7 @@ if (class_exists('PHP_CodeSniffer_Standards_CodingStandard', true) === false) {
 /**
  * Zikula Coding Standard.
  */
-class PHP_CodeSniffer_Standards_Zikula_ZikulaVCSFilterCodingStandard extends PHP_CodeSniffer_Standards_CodingStandard
+class PHP_CodeSniffer_Standards_ZikulaVCSFilter_ZikulaVCSFilterCodingStandard extends PHP_CodeSniffer_Standards_CodingStandard
 {
     /**
      * Return a list of external sniffs to include with this standard.
@@ -26,6 +26,13 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaVCSFilterCodingStandard extends PHP
             'Squiz/Sniffs/Classes/ClassFileNameSniff.php',
             'Squiz/Sniffs/Classes/ValidClassNameSniff.php',
             'Zend/Sniffs/Files/ClosingTagSniff.php',// no ending PHP_EOF tags
+            'Squiz/Sniffs/ControlStructures/ControlSignatureSniff.php',
+            'Squiz/Sniffs/ControlStructures/ElseIfDeclarationSniff.php',
+            'Squiz/Sniffs/ControlStructures/ForEachLoopDeclarationSniff.php',
+            'Squiz/Sniffs/ControlStructures/ForLoopDeclarationSniff.php',
+            //'Squiz/Sniffs/ControlStructures/InlineIfDeclarationSniff.php',
+            'Squiz/Sniffs/ControlStructures/LowercaseDeclarationSniff.php',
+            'Squiz/Sniffs/ControlStructures/SwitchDeclarationSniff.php',
         );
 
 
