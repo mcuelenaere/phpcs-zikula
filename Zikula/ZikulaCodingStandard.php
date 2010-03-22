@@ -47,7 +47,7 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
             'Squiz/Sniffs/Classes/ClassFileNameSniff.php',
             'Squiz/Sniffs/Classes/ValidClassNameSniff.php',
             'Squiz/Sniffs/ControlStructures/ControlSignatureSniff.php',
-            'Squiz/Sniffs/ControlStructures/ElseIfDeclarationSniff.php',
+            //'Squiz/Sniffs/ControlStructures/ElseIfDeclarationSniff.php', // crazy
             'Squiz/Sniffs/ControlStructures/ForEachLoopDeclarationSniff.php',
             'Squiz/Sniffs/ControlStructures/ForLoopDeclarationSniff.php',
             //'Squiz/Sniffs/ControlStructures/InlineIfDeclarationSniff.php',// problematic
