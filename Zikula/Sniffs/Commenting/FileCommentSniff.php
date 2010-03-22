@@ -240,7 +240,7 @@ class Zikula_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Sniff
             $lastChar  = $testShort[(strlen($testShort) - 1)];
             if (substr_count($testShort, $phpcsFile->eolChar) !== 0) {
                 $error = 'File comment short description must be on a single line';
-                $phpcsFile->addError($error, ($commentStart + 1));
+//                $phpcsFile->addError($error, ($commentStart + 1));
             }
 
             if (preg_match('|[A-Z]|', $testShort[0]) === 0) {

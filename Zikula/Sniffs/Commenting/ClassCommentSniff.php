@@ -266,7 +266,7 @@ class Zikula_Sniffs_Commenting_ClassCommentSniff implements PHP_CodeSniffer_Snif
 
         // Since tag missing.
         if (in_array('since', $foundTags) === false) {
-//            $error = 'Missing @since tag in class comment';
+            $error = 'Missing @since tag in class comment';
 //            $this->currentFile->addError($error, $commentEnd);
             return;
         }

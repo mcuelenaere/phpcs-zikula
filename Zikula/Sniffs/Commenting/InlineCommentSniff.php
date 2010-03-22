@@ -213,29 +213,29 @@ class Zikula_Sniffs_Commenting_InlineCommentSniff implements PHP_CodeSniffer_Sni
             return;
         }
 
-//        if (preg_match('|[A-Z]|', $commentText[0]) === 0) {
-//            $error = 'Inline comments must start with a capital letter';
-//            $phpcsFile->addError($error, $topComment);
-//        }
-//
-//        $commentCloser   = $commentText[(strlen($commentText) - 1)];
-//        $acceptedClosers = array(
-//                            'full-stops'        => '.',
-//                            'exclamation marks' => '!',
-//                            'or question marks' => '?',
-//                           );
-//
-//        if (in_array($commentCloser, $acceptedClosers) === false) {
-//            $error = 'Inline comments must end in';
-//            foreach ($acceptedClosers as $closerName => $symbol) {
-//                $error .= ' '.$closerName.',';
-//            }
-//
-//            $error = rtrim($error, ',');
-//            $phpcsFile->addError($error, $stackPtr);
-//        }
-//
-//        // Finally, the line below the last comment cannot be empty.
+        if (preg_match('|[A-Z]|', $commentText[0]) === 0) {
+            $error = 'Inline comments must start with a capital letter';
+            $phpcsFile->addError($error, $topComment);
+        }
+
+        $commentCloser   = $commentText[(strlen($commentText) - 1)];
+        $acceptedClosers = array(
+                            'full-stops'        => '.',
+                            'exclamation marks' => '!',
+                            'or question marks' => '?',
+                           );
+
+        if (in_array($commentCloser, $acceptedClosers) === false) {
+            $error = 'Inline comments must end in';
+            foreach ($acceptedClosers as $closerName => $symbol) {
+                $error .= ' '.$closerName.',';
+            }
+
+            $error = rtrim($error, ',');
+            $phpcsFile->addError($error, $stackPtr);
+        }
+
+        // Finally, the line below the last comment cannot be empty.
 //        $start = false;
 //        for ($i = ($stackPtr + 1); $i < $phpcsFile->numTokens; $i++) {
 //            if ($tokens[$i]['line'] === ($tokens[$stackPtr]['line'] + 1)) {
