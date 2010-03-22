@@ -209,13 +209,13 @@ class Zikula_Sniffs_Commenting_InlineCommentSniff implements PHP_CodeSniffer_Sni
 
         if ($commentText === '') {
             $error = 'Blank comments are not allowed';
-            $phpcsFile->addError($error, $stackPtr);
+            $phpcsFile->addWarning($error, $stackPtr);
             return;
         }
 
         if (preg_match('|[A-Z]|', $commentText[0]) === 0) {
             $error = 'Inline comments must start with a capital letter';
-            $phpcsFile->addError($error, $topComment);
+//            $phpcsFile->addError($error, $topComment);
         }
 
         $commentCloser   = $commentText[(strlen($commentText) - 1)];
@@ -232,7 +232,7 @@ class Zikula_Sniffs_Commenting_InlineCommentSniff implements PHP_CodeSniffer_Sni
             }
 
             $error = rtrim($error, ',');
-            $phpcsFile->addError($error, $stackPtr);
+//            $phpcsFile->addError($error, $stackPtr);
         }
 
         // Finally, the line below the last comment cannot be empty.
