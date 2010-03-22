@@ -44,8 +44,8 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
             'Squiz/Sniffs/Classes/LowercaseClassKeywordsSniff.php',
             'Squiz/Sniffs/Classes/SelfMemberReferenceSniff.php',
             'Squiz/Sniffs/Classes/DuplicatePropertySniff.php',
-            'Squiz/Sniffs/Classes/ClassFileNameSniff.php',
-            'Squiz/Sniffs/Classes/ValidClassNameSniff.php',
+            //'Squiz/Sniffs/Classes/ClassFileNameSniff.php',
+            //'Squiz/Sniffs/Classes/ValidClassNameSniff.php',
             'Squiz/Sniffs/ControlStructures/ControlSignatureSniff.php',
             //'Squiz/Sniffs/ControlStructures/ElseIfDeclarationSniff.php', // crazy
             'Squiz/Sniffs/ControlStructures/ForEachLoopDeclarationSniff.php',

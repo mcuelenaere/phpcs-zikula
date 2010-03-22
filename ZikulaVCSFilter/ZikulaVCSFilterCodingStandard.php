@@ -27,12 +27,9 @@ class PHP_CodeSniffer_Standards_ZikulaVCSFilter_ZikulaVCSFilterCodingStandard ex
             'Squiz/Sniffs/Classes/ValidClassNameSniff.php',
             'Zend/Sniffs/Files/ClosingTagSniff.php',// no ending PHP_EOF tags
             'Squiz/Sniffs/ControlStructures/ControlSignatureSniff.php',
-            'Squiz/Sniffs/ControlStructures/ElseIfDeclarationSniff.php',
             'Squiz/Sniffs/ControlStructures/ForEachLoopDeclarationSniff.php',
             'Squiz/Sniffs/ControlStructures/ForLoopDeclarationSniff.php',
-            //'Squiz/Sniffs/ControlStructures/InlineIfDeclarationSniff.php',
             'Squiz/Sniffs/ControlStructures/LowercaseDeclarationSniff.php',
-            'Squiz/Sniffs/ControlStructures/SwitchDeclarationSniff.php',
         );
 
 
