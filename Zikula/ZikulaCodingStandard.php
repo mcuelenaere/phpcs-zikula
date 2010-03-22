@@ -18,9 +18,9 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
     {
         return array(
             //'Generic/Sniffs/CodeAnalysis/JumbledIncrementerSniff.php',
-            'Generic/Sniffs/CodeAnalysis/UnusedFunctionParameterSniff.php',
+            //'Generic/Sniffs/CodeAnalysis/UnusedFunctionParameterSniff.php',
             //'Generic/Sniffs/CodeAnalysis/UnconditionalIfStatementSniff.php',
-            'Generic/Sniffs/CodeAnalysis/UselessOverridingMethodSniff.php',
+            //'Generic/Sniffs/CodeAnalysis/UselessOverridingMethodSniff.php',
             //'Generic/Sniffs/CodeAnalysis/ForLoopWithTestFunctionCallSniff.php',
             //'Generic/Sniffs/CodeAnalysis/ForLoopShouldBeWhileLoopSniff.php',
             //'Generic/Sniffs/CodeAnalysis/UnnecessaryFinalModifierSniff.php',
