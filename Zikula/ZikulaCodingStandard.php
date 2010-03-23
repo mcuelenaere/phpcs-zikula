@@ -17,7 +17,7 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
     public function getIncludedSniffs()
     {
         return array(
-            'Generic/Sniffs/Formatting/NoSpaceAfterCastSniff.php',
+            'Generic/Sniffs/Formatting/SpaceAfterCastSniff.php',
             'Generic/Sniffs/PHP/DisallowShortOpenTagSniff.php',  // no short PHP tags
             'Generic/Sniffs/PHP/LowerCaseConstantSniff.php',  // null, true, false should be lower case
             'Generic/Sniffs/WhiteSpace/DisallowTabIndentSniff.php',  // only spaces for indents
