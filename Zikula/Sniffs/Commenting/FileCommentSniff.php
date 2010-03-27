@@ -262,6 +262,7 @@ class Zikula_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Sniff
             }
 
             // Check each tag.
+            $this->processAuthors($commentStart, $commentEnd);
             $this->processTags($commentStart, $commentEnd);
         }//end if
 
@@ -486,25 +487,16 @@ class Zikula_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Sniff
 
 
     /**
-     * Author tag must be 'Squiz Pty Ltd <mysource4@squiz.net>'.
-     *
-     * @param int $errorPos The line number where the error occurs.
+     * Author tags not allowed
      *
      * @return void
      */
-    protected function processAuthors($errorPos)
+    protected function processAuthors($commentStart, $commentEnd)
     {
         $authors = $this->commentParser->getAuthors();
-        if (empty($authors) === false) {
-            $author  = $authors[0];
-            $content = $author->getContent();
-            if (empty($content) === true) {
-                $error = 'Content missing for @author tag in file comment';
-                $this->currentFile->addError($error, $errorPos);
-//            } else if ($content !== 'Squiz Pty Ltd <mysource4@squiz.net>') {
-//                $error = 'Expected "Squiz Pty Ltd <mysource4@squiz.net>" for author tag';
-//                $this->currentFile->addError($error, $errorPos);
-            }
+        if (count($authors) > 0) {
+            $error = '@author tag not allowed in file comment';
+            $this->currentFile->addError($error, $errorPos);
         }
 
     }//end processAuthors()
