@@ -494,6 +494,7 @@ class Zikula_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer_Sniff
     protected function processAuthors($commentStart, $commentEnd)
     {
         $authors = $this->commentParser->getAuthors();
+        $errorPos = ($commentStart + $tagElement->getLine());
         if (count($authors) > 0) {
             $error = '@author tag not allowed in file comment';
             $this->currentFile->addError($error, $errorPos);
