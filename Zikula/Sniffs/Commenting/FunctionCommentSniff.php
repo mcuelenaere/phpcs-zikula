@@ -270,12 +270,12 @@ class Zikula_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_S
 
         if (preg_match('|[A-Z]|', $testShort[0]) === 0) {
             $error = 'Function comment short description must start with a capital letter';
-            $phpcsFile->addError($error, ($commentStart + 1));
+//            $phpcsFile->addError($error, ($commentStart + 1));
         }
 
         if ($lastChar !== '.') {
             $error = 'Function comment short description must end with a full stop';
-            $phpcsFile->addError($error, ($commentStart + 1));
+//            $phpcsFile->addError($error, ($commentStart + 1));
         }
 
         // Check for unknown/deprecated tags.
