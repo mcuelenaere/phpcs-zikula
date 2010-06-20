@@ -2,6 +2,7 @@
 if (class_exists('PHP_CodeSniffer_Standards_CodingStandard', true) === false) {
     throw new PHP_CodeSniffer_Exception('Class PHP_CodeSniffer_Standards_CodingStandard not found');
 }
+ini_set('error_reporting', E_ALL & ~ E_NOTICE);
 
 /**
  * Zikula Coding Standard.
@@ -24,7 +25,7 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
             'Generic/Sniffs/WhiteSpace/ScopeIndentSniff.php',
             'MySource/Sniffs/PHP/EvalObjectFactorySniff.php',  // prohibit eval for object instanciation
 
-            'PEAR/Sniffs/NamingConventions/ValidFunctionNameSniff.php',
+            //'PEAR/Sniffs/NamingConventions/ValidFunctionNameSniff.php',
             'PEAR/Sniffs/NamingConventions/ValidVariableNameSniff.php',
 
             'Squiz/Sniffs/Commenting/EmptyCatchCommentSniff.php',
