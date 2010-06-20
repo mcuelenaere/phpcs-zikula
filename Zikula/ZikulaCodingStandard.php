@@ -26,7 +26,7 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
             'MySource/Sniffs/PHP/EvalObjectFactorySniff.php',  // prohibit eval for object instanciation
 
             //'PEAR/Sniffs/NamingConventions/ValidFunctionNameSniff.php',
-            'PEAR/Sniffs/NamingConventions/ValidVariableNameSniff.php',
+            //'PEAR/Sniffs/NamingConventions/ValidVariableNameSniff.php',
 
             'Squiz/Sniffs/Commenting/EmptyCatchCommentSniff.php',
             'Squiz/Sniffs/Commenting/FunctionCommentThrowTagSniff.php',
