@@ -40,7 +40,7 @@ class Zikula_Sniffs_Files_LineEndingsSniff extends Generic_Sniffs_Files_LineEndi
      *
      * @var string
      */
-    protected $eolChar = "\n";
+    public $eolChar = "\n";
 
 }//end class
 
