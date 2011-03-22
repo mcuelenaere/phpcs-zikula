@@ -170,8 +170,8 @@ class Zikula_Sniffs_Commenting_VariableCommentSniff extends PHP_CodeSniffer_Stan
             }
 
             if ($lastChar !== '.') {
-//                $error = 'Variable comment short description must end with a full stop';
-                $phpcsFile->addError($error, ($commentStart + 1));
+                $error = 'Variable comment short description must end with a full stop';
+//                $phpcsFile->addError($error, ($commentStart + 1));
             }
         }//end if
 
