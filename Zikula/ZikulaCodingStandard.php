@@ -18,6 +18,8 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
     public function getIncludedSniffs()
     {
         return array(
+            // NOTE: Both this file (for phpcs 1.2.2) and ruleset.xml (for phpcs 1.3.0) must be updated!
+            
             'Generic/Sniffs/Formatting/NoSpaceAfterCastSniff.php',
             'Generic/Sniffs/PHP/DisallowShortOpenTagSniff.php',  // no short PHP tags
             'Generic/Sniffs/PHP/LowerCaseConstantSniff.php',  // null, true, false should be lower case
@@ -54,6 +56,7 @@ class PHP_CodeSniffer_Standards_Zikula_ZikulaCodingStandard extends PHP_CodeSnif
      */
     public function getExcludedSniffs()
     {
+        // NOTE: Both this file (for phpcs 1.2.2) and ruleset.xml (for phpcs 1.3.0) must be updated!
         return array();
     }
 }
