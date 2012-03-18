@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<ruleset name="ZikulaLines">
+ <description>Zikula coding standards code sniffer ruleset.</description>
+</ruleset>
